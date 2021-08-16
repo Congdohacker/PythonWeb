@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<meta charset="UTF-8">
+	<title>Hello mọi người </title>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/thanhcun.css' %}" type="text/css">
+    <style>
+        html, body {
+            height: 100%;
+            background-color: #f6f6f6;
+        }
+    </style>
+</head>
+</head>
+<link rel="icon" href="{% static 'images/cun.jpg' %}"/>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top top-nav"> 
+	<span class="btn-open">&#9776;</span>
+</nav>	
+<div class="sidenav">
+	<span class="btn-close">&times;</span>
+	<div class="sidenav-item">
+		<a href="/dttdraw">Home</a>
+    <a href="/dttdrawdino"> Game Khủng Long T-REX </a>
+		<a href="/dttdrawabout">About</a>
+		<a href="">Contact</a>
+	</div>
+</div>
+<div class="main-content" style="min-height: 90%">
+	<center><a href="/dttdraw"><h1><p style ="font-family:time new roman">DTT DRAWS</p></h1></a></center> 
+    <center><p style ="font-family:time new roman"><font size="16">Đây là website của DTT DRAWS</font></p></center> 
+<style>
+h1 {
+  display: inline-block;
+  font: bold 4.5em/1.5 Bebas, sans-serif;
+  color: #5CA17C; /*non-webkit fallback*/
+  font-size: 72px;
+  text-transform: uppercase;
+   background-image: linear-gradient(to bottom, #FF0000, #0000FF, #000000, #FF0000);
+  background-size: auto 250%;
+  transition: background-position 0.5s;
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 200px;
+  background-position: 0 100%;
+}
+h1:hover {
+  background-position: 0 0;
+  cursor: pointer;
+}
+</style>
+
+<p style ="font-family:time new roman"><span style="font-size: 32px">Website được viết bởi Đỗ Thành Công và thuộc quyền sở hữu của DTT DRAWS  </span></p>
+
+</div>
+
+
+
+	<script type="text/javascript" src="{% static 'thanhcun/1/jquery-3.3.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'thanhcun/1/popper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'thanhcun/1/script.js' %}"></script>
+<footer>
+        <center><p style ="font-family:time new roman"><span style="font-size: 16px">- Copyright © <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> <data:blog.title/>   - Thiết kế bởi <a href='/' title='DTT DRAWS'>Đỗ Thành Công  </a> 
+        </script> <data:blog.title/>   - Thuộc sở hữu :<a href='/dttdraw' title='DTT DRAWS'> DTT DRAWS  </a> 
+        </span> </p></div></center>
+</footer>
+</body>
+</html>

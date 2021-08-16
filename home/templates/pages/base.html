@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+   <title>{% block title %}{% endblock %}</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            background-color: #f6f6f6;
+        }
+    </style>
+
+</head>
+<link rel="icon" href="{% static 'images/C.jpg' %}"/>
+<body>
+   <div class="container-fluid" style="min-height: 90%">
+       <div class="row">
+            <div class="col-sm-2">
+               <center><img src="{% static 'images/C.jpg' %}" class="responsive-img" style="max-height:150px"/></center>
+            </div>
+            <div class="col-sm-8">
+                <center><h1>WEBSITES ĐƯỢC LÀM BỞI WEB MASTER CĐ</h1></center> 
+            </div>
+            <div class="col-sm-2">
+                {% if user.username %}
+                    <p> Xin chào bạn: {{user.username}}</p>
+                    <p> Mật khẩu của bạn là: {{user.password}}</p>
+                    <p><a href="{% url 'logout' %}">Đăng xuất</a></p>
+                {% else %}
+                    <p><a href="{% url 'register' %}">Đăng ký</a> || <a href="{%url 'login' %}">Đăng nhập</a></p>
+                {% endif %}
+                      <input type="text" width=40 placeholder="Tìm kiếm phiên bản FAKE"style="max-height:150px"/>
+                
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="bs-sliderbar" style="background-color: #ffffff;">
+                    <ul class="nav flex-column">
+                        <li><a href="/">Thông tin cá nhân</a></li>
+                        <li><a href="{% url 'blog' %}">Bài viết</a></li>
+                        <li><a href="{% url 'contact' %}"> liên hệ</a></li>
+                        <li><a href="{% url 'proc' %}"> Công </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div class="container-fluid">
+                    {% block content %}
+                
+                    {% endblock %}
+                    <div class="container-fluid">
+                        
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+<footer>
+    <div class="container-fluid">
+        <a href="https://www.youtube.com/channel/UCA-uN4XPaccNYGWjVKEk7RA"><img width=40 src="https://yt3.ggpht.com/a1_d20GPV_NlF1ouFVNu_HR4h8QsdvnEenWLbjRUgfscJ3M55g9rU7R5ULyhdWvR4IWFrnIGonQ=s88-c-k-c0x00ffffff-no-rj" /></a> 
+         | <a href="#">*</a>
+         | <a href="#">*</a>
+    </div>
+</footer>
+<footer>
+                            <p>- Copyright © <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> <data:blog.title/>   - Thiết kế bởi <a href='/' title='johanes djogan'>Đỗ Thành Công </a> </p></div>
+                        </footer>
+</body>
+</html>
